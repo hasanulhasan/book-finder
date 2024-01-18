@@ -88,9 +88,10 @@ const Books = () => {
           data.books.sort((a, b) => {
             if (sort === 'year_asc') { return (Number(a.published) - Number(b.published)) }
             else if (sort === 'year_desc') { return (Number(b.published) - Number(a.published)) }
+            else if (sort === '') { return (Number(a.id) - Number(b.id)) }
             else if (sort === 'name_asc') { return a.name.localeCompare(b.name) }
             else if (sort === 'name_desc') { return b.name.localeCompare(a.name) }
-            else { return null }
+            else { return 1 }
           }).filter(book => book.name.toLowerCase().includes(searchTerm.toLowerCase())).map(book => <Book key={book.id} book={book}></Book>)
         }
       </div>

@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import bookImg from '../assets/book.png'
-import Star from '../uitls/Star';
 import stars from '../assets/star.svg'
 import { useState } from 'react';
 
 const Book = ({book}) => {
-  const {id, name, author, rating, price, isFavorite} = book;
+  const {name, author, rating, price, isFavorite} = book;
   const [favorite, setIsFavorite] = useState(isFavorite);
 
   const handleFavorite = () => {
@@ -29,10 +28,12 @@ const Book = ({book}) => {
               <h4 className="text-lg font-bold lg:text-xl">${price}</h4>
               {/* <!-- stars --> */}
               <div className="flex items-center space-x-1">
+                {/* <img src={stars} /> */}
                 <img src={stars} />
                 <img src={stars} />
-                <Star/>
-
+                <img src={stars} />
+                <img src={stars} />
+                <img src={stars} />
                 <span className="text-xs lg:text-sm">({rating} Star)</span>
               </div>
               {/* <!-- stars ends --> */}
@@ -111,7 +112,6 @@ const Book = ({book}) => {
                 </svg>
                 Favourite
               </button>
-                
                 </>
               }
             </div>

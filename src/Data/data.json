@@ -4,10 +4,10 @@
         "id": 1,
         "name": "JavaScript (2003)",
         "img": "www.inmg.com",
-        "author": "James Hames",
+        "author": "Brendan Eich",
         "rating": "4",
         "price" : "250",
-        "isFavorite" : false,
+        "isFavorite" : true,
         "published": 2003
     },
     {
@@ -26,9 +26,39 @@
         "img": "www.inmg.com",
         "author": "Anisul Haque",
         "rating": "4",
-        "price" : "200",
+        "price" : "270",
         "isFavorite" : true,
         "published": 2006
+    },
+    {
+        "id": 4,
+        "name": "Sammobadi (1946)",
+        "img": "www.inmg.com",
+        "author": "Kazi Nazrul Islam",
+        "rating": "2",
+        "price" : "320",
+        "isFavorite" : false,
+        "published": 1946
+    },
+    {
+        "id": 5,
+        "name": "Hazar Bochor Dhore (1956)",
+        "img": "www.inmg.com",
+        "author": "Jahir Raihan",
+        "rating": "3",
+        "price" : "420",
+        "isFavorite" : true,
+        "published": 1956
+    },
+    {
+        "id": 6,
+        "name": "Gitanjoli (1895)",
+        "img": "www.inmg.com",
+        "author": "Rabindranath Tagore",
+        "rating": "3",
+        "price" : "120",
+        "isFavorite" : false,
+        "published": 1895
     }
   ]
 }
