@@ -1,6 +1,10 @@
 import Book from "./Book";
+import data from '../Data/data.json'
+import { useState } from "react";
 
 const Books = () => {
+  const [seearchTerm, setSearchTerm] = useState(null);
+
   return (
     <div>
       <header className="mb-8 lg:mb-10 mx-auto max-w-7xl">
@@ -76,9 +80,11 @@ const Books = () => {
       </header>
 
       <div className="container mx-auto grid grid-cols-1 gap-8 max-w-7xl md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <Book/>
+        {
+          data.books.map(book => <Book key={book.id} book={book}></Book>)
+        }
       </div>
-      
+
     </div>
   );
 };

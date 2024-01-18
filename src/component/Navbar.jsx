@@ -1,4 +1,4 @@
-
+import Logo from '../assets/logo.png'
 const Navbar = () => {
   return (
     <nav className="py-6 ">
@@ -7,7 +7,7 @@ const Navbar = () => {
         <a href="/">
           <img
             className="max-w-[100px] md:max-w-[165px]"
-            src="./assets/lws-logo-en.svg"
+            src={Logo}
             alt="Lws"
           />
         </a>

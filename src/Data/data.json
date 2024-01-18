@@ -1,0 +1,31 @@
+{
+  "books": [
+    {
+        "id": 1,
+        "name": "JavaScript",
+        "img": "www.inmg.com",
+        "author": "James Hames",
+        "rating": "4",
+        "price" : "250",
+        "isFavorite" : false
+    },
+    {
+        "id": 2,
+        "name": "Himu",
+        "img": "www.inmg.com",
+        "author": "Humayun Ahmed",
+        "rating": "5",
+        "price" : "150",
+        "isFavorite" : true
+    },
+    {
+        "id": 3,
+        "name": "Ma",
+        "img": "www.inmg.com",
+        "author": "Anisul Haque",
+        "rating": "4",
+        "price" : "200",
+        "isFavorite" : true
+    }
+  ]
+}

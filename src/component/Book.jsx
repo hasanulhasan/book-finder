@@ -1,25 +1,31 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import bookImg from '../assets/book.png'
+import stars from '../assets/star.svg'
 
-const Book = () => {
+const Book = ({book}) => {
+  const {id, name, author, rating, price, isFavorite} = book;
+
   return (
     <div className="space-y-3">
           {/* <!-- thumbnail --> */}
           <div
             className="flex items-center justify-center rounded-md border border-[#324251]/30 bg-white p-4"
           >
-            <img className="max-w-[144px]" src="./assets/book.png" alt="book name" />
+            <img className="max-w-[144px]" src={bookImg} alt="book name" />
           </div>
           {/* <!-- info --> */}
           <div className="space-y-3">
-            <h4 className="text-lg font-bold lg:text-xl">JavaScript and Jquery</h4>
-            <p className="text-xs lg:text-sm">By : <span>Jon Duckett</span></p>
+            <h4 className="text-lg font-bold lg:text-xl">{name}</h4>
+            <p className="text-xs lg:text-sm">By : <span>{author}</span></p>
             <div className="flex items-center justify-between">
-              <h4 className="text-lg font-bold lg:text-xl">$62</h4>
+              <h4 className="text-lg font-bold lg:text-xl">${price}</h4>
               {/* <!-- stars --> */}
               <div className="flex items-center space-x-1">
-                <img src="./assets/star.svg" />
-                <img src="./assets/star.svg" />
-                <img src="./assets/star.svg" />
-                <img src="./assets/star.svg" />
+                <img src={stars} />
+                <img src={stars} />
+                <img src={stars} />
+                <img src={stars} />
                 <span className="text-xs lg:text-sm">(4 Star)</span>
               </div>
               {/* <!-- stars ends --> */}
