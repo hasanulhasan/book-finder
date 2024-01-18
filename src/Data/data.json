@@ -2,30 +2,33 @@
   "books": [
     {
         "id": 1,
-        "name": "JavaScript",
+        "name": "JavaScript (2003)",
         "img": "www.inmg.com",
         "author": "James Hames",
         "rating": "4",
         "price" : "250",
-        "isFavorite" : false
+        "isFavorite" : false,
+        "published": 2003
     },
     {
         "id": 2,
-        "name": "Himu",
+        "name": "Himu (1999)",
         "img": "www.inmg.com",
         "author": "Humayun Ahmed",
         "rating": "5",
         "price" : "150",
-        "isFavorite" : true
+        "isFavorite" : false,
+        "published": 1999
     },
     {
         "id": 3,
-        "name": "Ma",
+        "name": "Ma (2006)",
         "img": "www.inmg.com",
         "author": "Anisul Haque",
         "rating": "4",
         "price" : "200",
-        "isFavorite" : true
+        "isFavorite" : true,
+        "published": 2006
     }
   ]
 }

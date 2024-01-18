@@ -3,7 +3,9 @@ import data from '../Data/data.json'
 import { useState } from "react";
 
 const Books = () => {
-  const [seearchTerm, setSearchTerm] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sort, setSort] = useState(null);
+  
 
   return (
     <div>
@@ -26,6 +28,7 @@ const Books = () => {
                   className="relative w-full overflow-hidden rounded-lg border-2 border-[#1C4336] text-[#1C4336] md:min-w-[380px] lg:min-w-[440px]"
                 >
                   <input
+                    onChange={(e)=> setSearchTerm(e.target.value)}
                     type="search"
                     id="search-dropdown"
                     className="z-20 block w-full bg-white px-4 py-2.5 pr-10 text-[#1C4336] placeholder:text-[#1C4336] focus:outline-none"
@@ -64,6 +67,7 @@ const Books = () => {
           <div className="flex items-stretch space-x-3">
             {/* <!-- Sort --> */}
             <select
+              onChange={(e)=> setSort(e.target.value)}
               className="cursor-pointer rounded-md border px-4 py-2 text-center text-gray-600"
               name="sortBy"
               id="sortBy"
@@ -81,7 +85,13 @@ const Books = () => {
 
       <div className="container mx-auto grid grid-cols-1 gap-8 max-w-7xl md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {
-          data.books.map(book => <Book key={book.id} book={book}></Book>)
+          data.books.sort((a, b) => {
+            if (sort === 'year_asc') { return (Number(a.published) - Number(b.published)) }
+            else if (sort === 'year_desc') { return (Number(b.published) - Number(a.published)) }
+            else if (sort === 'name_asc') { return a.name.localeCompare(b.name) }
+            else if (sort === 'name_desc') { return b.name.localeCompare(a.name) }
+            else { return null }
+          }).filter(book => book.name.toLowerCase().includes(searchTerm.toLowerCase())).map(book => <Book key={book.id} book={book}></Book>)
         }
       </div>
 
